@@ -118,13 +118,13 @@
                             <div class="w-10 h-10 bg-green-50 text-brand-green rounded-full flex items-center justify-center shrink-0">
                                 <i data-lucide="check" class="w-6 h-6"></i>
                             </div>
-                            <p class="text-brand-slate text-sm">Ultra-short pulse technology for cold ablation with no thermal damage.</p>
+                            <p class="text-brand-slate text-sm">Open-Access Design in a well-lit environment for observation convenience</p>
                         </div>
                         <div class="flex items-start gap-4">
                             <div class="w-10 h-10 bg-green-50 text-brand-green rounded-full flex items-center justify-center shrink-0">
                                 <i data-lucide="check" class="w-6 h-6"></i>
                             </div>
-                            <p class="text-brand-slate text-sm">Haptic feedback handpiece for surgeons to feel tissue density differences.</p>
+                            <p class="text-brand-slate text-sm">Maintains a consistence thermal environment even in open-bed settings.</p>
                         </div>
                     </div>
                     <a href="{{ route('contact') }}" class="inline-block px-10 py-4 bg-brand-blue text-white rounded-xl font-bold hover:bg-brand-blue-mid transition-all shadow-xl">
