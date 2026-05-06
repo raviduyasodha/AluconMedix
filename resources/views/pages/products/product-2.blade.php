@@ -37,9 +37,9 @@
                         </div>
                     </div>
                     
-                    <div class="absolute -top-6 -left-6 w-32 h-32 bg-brand-blue-mid rounded-full flex items-center justify-center border-8 border-gray-50 shadow-lg z-10">
+                    {{-- <div class="absolute -top-6 -left-6 w-32 h-32 bg-brand-blue-mid rounded-full flex items-center justify-center border-8 border-gray-50 shadow-lg z-10">
                         <span class="text-white font-bold text-center leading-tight">New<br>Featured</span>
-                    </div>
+                    </div> --}}
                 </div>
 
                 <script>
@@ -110,9 +110,9 @@
 
                 <!-- Product Info -->
                 <div>
-                    <span class="inline-block px-4 py-1.5 bg-cyan-100 text-brand-blue rounded-full text-xs font-bold uppercase tracking-widest mb-6">Advanced Surgery</span>
+                    {{-- <span class="inline-block px-4 py-1.5 bg-cyan-100 text-brand-blue rounded-full text-xs font-bold uppercase tracking-widest mb-6">Advanced Surgery</span> --}}
                     <h1 class="text-4xl md:text-5xl font-bold text-brand-blue mb-6">Alucon Infant Warmer</h1>
-                    <p class="text-xl text-brand-slate mb-8 leading-relaxed">Advanced surgical laser system for ultra-precise procedures. Designed for the most complex micro-surgeries with zero mechanical impact.</p>
+                    <p class="text-xl text-brand-slate mb-8 leading-relaxed">Our radiant warmer provides a nurturing cocoon of precision-controlled heat, ensuring a safe, stable environment for life's first precious moments. Advanced technology, delivered with a soft touch.</p>
                     <div class="space-y-6 mb-10">
                         <div class="flex items-start gap-4">
                             <div class="w-10 h-10 bg-green-50 text-brand-green rounded-full flex items-center justify-center shrink-0">
@@ -142,25 +142,37 @@
                 <div>
                     <h2 class="text-3xl font-bold text-brand-blue mb-12">Key Features</h2>
                     <ul class="space-y-6">
-                        <li class="flex items-center gap-4 text-brand-slate">
-                            <i data-lucide="zap" class="w-6 h-6 text-brand-blue-mid"></i>
-                            <span>Ultra-Short Pulse Laser Technology</span>
+                        <li class="flex items-start gap-4 text-brand-slate">
+                            <span class="w-2 h-2 bg-brand-blue-mid rounded-full mt-2 shrink-0"></span>
+                            <span>High quality powder-coated steel body</span>
                         </li>
-                        <li class="flex items-center gap-4 text-brand-slate">
-                            <i data-lucide="brain" class="w-6 h-6 text-brand-blue-mid"></i>
-                            <span>AI-Assisted Tissue Recognition System</span>
+                        <li class="flex items-start gap-4 text-brand-slate">
+                            <span class="w-2 h-2 bg-brand-blue-mid rounded-full mt-2 shrink-0"></span>
+                            <span>6mm thickness Perspex guard railing for safety and visibility</span>
                         </li>
-                        <li class="flex items-center gap-4 text-brand-slate">
-                            <i data-lucide="hand" class="w-6 h-6 text-brand-blue-mid"></i>
-                            <span>Ergonomic Handpiece with Haptic Feedback</span>
+                        <li class="flex items-start gap-4 text-brand-slate">
+                            <span class="w-2 h-2 bg-brand-blue-mid rounded-full mt-2 shrink-0"></span>
+                            <span>Programmable heater controller with fixed temperature presets</span>
                         </li>
-                        <li class="flex items-center gap-4 text-brand-slate">
-                            <i data-lucide="settings-2" class="w-6 h-6 text-brand-blue-mid"></i>
-                            <span>Dynamic Power Control for Diverse Tissue Types</span>
+                        <li class="flex items-start gap-4 text-brand-slate">
+                            <span class="w-2 h-2 bg-brand-blue-mid rounded-full mt-2 shrink-0"></span>
+                            <span>Flexible skin temperature probe with dedicated display</span>
                         </li>
-                        <li class="flex items-center gap-4 text-brand-slate">
-                            <i data-lucide="wind" class="w-6 h-6 text-brand-blue-mid"></i>
-                            <span>Integrated High-Efficiency Smoke Evacuation</span>
+                        <li class="flex items-start gap-4 text-brand-slate">
+                            <span class="w-2 h-2 bg-brand-blue-mid rounded-full mt-2 shrink-0"></span>
+                            <span>650W ceramic coated Infrared Heater element</span>
+                        </li>
+                        <li class="flex items-start gap-4 text-brand-slate">
+                            <span class="w-2 h-2 bg-brand-blue-mid rounded-full mt-2 shrink-0"></span>
+                            <span>LED observation lamps</span>
+                        </li>
+                        <li class="flex items-start gap-4 text-brand-slate">
+                            <span class="w-2 h-2 bg-brand-blue-mid rounded-full mt-2 shrink-0"></span>
+                            <span>Silent and lockable castor wheels</span>
+                        </li>
+                        <li class="flex items-start gap-4 text-brand-slate">
+                            <span class="w-2 h-2 bg-brand-blue-mid rounded-full mt-2 shrink-0"></span>
+                            <span>Easy access mounting points for oxygen supply with oxygen regulator (oxygen cylinder not included)</span>
                         </li>
                     </ul>
                 </div>
@@ -176,28 +188,28 @@
                             </thead>
                             <tbody class="divide-y divide-gray-100">
                                 <tr>
-                                    <td class="px-6 py-4 font-semibold text-brand-blue">Laser Type</td>
-                                    <td class="px-6 py-4 text-brand-slate">CO2 or Diode (Selectable)</td>
+                                    <td class="px-6 py-4 font-semibold text-brand-blue">Mattress - Length</td>
+                                    <td class="px-6 py-4 text-brand-slate">600mm</td>
                                 </tr>
                                 <tr>
-                                    <td class="px-6 py-4 font-semibold text-brand-blue">Wavelength</td>
-                                    <td class="px-6 py-4 text-brand-slate">10,600 nm / 810 nm</td>
+                                    <td class="px-6 py-4 font-semibold text-brand-blue">Mattress - Width</td>
+                                    <td class="px-6 py-4 text-brand-slate">500mm</td>
                                 </tr>
                                 <tr>
-                                    <td class="px-6 py-4 font-semibold text-brand-blue">Max Power</td>
-                                    <td class="px-6 py-4 text-brand-slate">30W (Continuous) / 60W (Pulse)</td>
+                                    <td class="px-6 py-4 font-semibold text-brand-blue">Mattress - Thickness</td>
+                                    <td class="px-6 py-4 text-brand-slate">25mm</td>
                                 </tr>
                                 <tr>
-                                    <td class="px-6 py-4 font-semibold text-brand-blue">Spot Size</td>
-                                    <td class="px-6 py-4 text-brand-slate">0.1 mm to 1.0 mm (Adjustable)</td>
+                                    <td class="px-6 py-4 font-semibold text-brand-blue">Working level from the ground</td>
+                                    <td class="px-6 py-4 text-brand-slate">900mm</td>
                                 </tr>
                                 <tr>
-                                    <td class="px-6 py-4 font-semibold text-brand-blue">Aiming Beam</td>
-                                    <td class="px-6 py-4 text-brand-slate">Red Diode Laser, 635 nm</td>
+                                    <td class="px-6 py-4 font-semibold text-brand-blue">Unit Weight</td>
+                                    <td class="px-6 py-4 text-brand-slate">65Kg</td>
                                 </tr>
                                 <tr>
-                                    <td class="px-6 py-4 font-semibold text-brand-blue">Cooling</td>
-                                    <td class="px-6 py-4 text-brand-slate">Internal Air/Water Hybrid System</td>
+                                    <td class="px-6 py-4 font-semibold text-brand-blue">Warranty</td>
+                                    <td class="px-6 py-4 text-brand-slate">One Year Warranty for any manufacturing defects</td>
                                 </tr>
                             </tbody>
                         </table>
