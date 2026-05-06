@@ -111,7 +111,7 @@
                 <!-- Product Info -->
                 <div>
                     {{-- <span class="inline-block px-4 py-1.5 bg-cyan-100 text-brand-blue rounded-full text-xs font-bold uppercase tracking-widest mb-6">Advanced Surgery</span> --}}
-                    <h1 class="text-4xl md:text-5xl font-bold text-brand-blue mb-6">Alucon Infant Warmer</h1>
+                    <h1 class="text-4xl md:text-5xl font-bold text-brand-blue mb-6">Alucon Neonatal Infant Radiant Warmer</h1>
                     <p class="text-xl text-brand-slate mb-8 leading-relaxed">Our radiant warmer provides a nurturing cocoon of precision-controlled heat, ensuring a safe, stable environment for life's first precious moments. Advanced technology, delivered with a soft touch.</p>
                     <div class="space-y-6 mb-10">
                         <div class="flex items-start gap-4">
