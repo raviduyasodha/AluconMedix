@@ -188,7 +188,7 @@
                                 </tr>
                                 <tr>
                                     <td class="px-6 py-4 font-semibold text-brand-blue">Adjustable Height</td>
-                                    <td class="px-6 py-4 text-brand-slate">737mm – 889mm</td>
+                                    <td class="px-6 py-4 text-brand-slate">737mm - 889mm</td>
                                 </tr>
                                 <tr>
                                     <td class="px-6 py-4 font-semibold text-brand-blue">Lifting Capacity</td>
@@ -204,7 +204,7 @@
                                 </tr>
                                 <tr>
                                     <td class="px-6 py-4 font-semibold text-brand-blue">Controller</td>
-                                    <td class="px-6 py-4 text-brand-slate">10 – Function hand held remote</td>
+                                    <td class="px-6 py-4 text-brand-slate">10 - Function hand held remote</td>
                                 </tr>
                                 <tr>
                                     <td class="px-6 py-4 font-semibold text-brand-blue">Warranty</td>
