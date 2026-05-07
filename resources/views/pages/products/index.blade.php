@@ -25,7 +25,7 @@
                     </div>
                     <div class="p-10">
                         <h3 class="text-3xl font-bold text-brand-blue mb-4">Alucon Veterinary Surgical Table</h3>
-                        <p class="text-brand-slate text-lg mb-8 leading-relaxed">High-precision real-time monitoring for critical care environments with intuitive touch interface and cloud connectivity.</p>
+                        <p class="text-brand-slate text-lg mb-8 leading-relaxed">Versatile V-Top design operating table placed on a smooth electric lift designed to meet modern surgical requirements</p>
                         <div class="flex flex-wrap gap-3 mb-10">
                             {{-- <span class="bg-blue-50 text-brand-blue-mid px-4 py-1.5 rounded-full text-sm font-semibold">Touchscreen</span>
                             <span class="bg-blue-50 text-brand-blue-mid px-4 py-1.5 rounded-full text-sm font-semibold">12-Lead ECG</span>
@@ -47,7 +47,7 @@
                     </div>
                     <div class="p-10">
                         <h3 class="text-3xl font-bold text-brand-blue mb-4">Alucon Neonatal Infant Radiant Warmer</h3>
-                        <p class="text-brand-slate text-lg mb-8 leading-relaxed">Advanced surgical laser system designed for ultra-precise procedures with minimal tissue damage and rapid recovery.</p>
+                        <p class="text-brand-slate text-lg mb-8 leading-relaxed">Our radiant warmer provides a nurturing cocoon of precision-controlled heat, ensuring a safe, stable environment for life's first precious moments. Advanced technology, delivered with a soft touch.</p>
                         <div class="flex flex-wrap gap-3 mb-10">
                             {{-- <span class="bg-blue-50 text-brand-blue-mid px-4 py-1.5 rounded-full text-sm font-semibold">AI-Assisted</span>
                             <span class="bg-blue-50 text-brand-blue-mid px-4 py-1.5 rounded-full text-sm font-semibold">Ultra-Short Pulse</span>
