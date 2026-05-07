@@ -40,7 +40,7 @@ class PageController extends Controller
 
         // Send Email
         try {
-            \Illuminate\Support\Facades\Mail::to('info@aluconmedix.lk')->send(new \App\Mail\ContactMessage($validated));
+            \Illuminate\Support\Facades\Mail::to('raviduyasodha9@gmail.com')->send(new \App\Mail\ContactMessage($validated));
         } catch (\Exception $e) {
             // Log the error but continue to show success message to user
             \Illuminate\Support\Facades\Log::error('Mail sending failed: ' . $e->getMessage());
@@ -63,6 +63,17 @@ class PageController extends Controller
             return view('pages.products.product-2');
         } elseif ($slug === 'rent-surgical-table') {
             return view('pages.products.rent-1');
+        }
+        
+        abort(404);
+    }
+
+    public function productGallery($slug)
+    {
+        if ($slug === 'vita-x100') {
+            return view('pages.products.product-1-gallery');
+        } elseif ($slug === 'laser-s3') {
+            return view('pages.products.product-2-gallery');
         }
         
         abort(404);

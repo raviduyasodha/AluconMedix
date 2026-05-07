@@ -127,9 +127,14 @@
                             <p class="text-brand-slate text-sm">Haptic feedback handpiece for surgeons to feel tissue density differences.</p>
                         </div>
                     </div>
-                    <a href="{{ route('contact') }}" class="inline-block px-10 py-4 bg-brand-blue text-white rounded-xl font-bold hover:bg-brand-blue-mid transition-all shadow-xl">
-                        Request a Quote
-                    </a>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="{{ route('contact') }}" class="inline-block px-10 py-4 bg-brand-blue text-white rounded-xl font-bold hover:bg-brand-blue-mid transition-all shadow-xl">
+                            Request a Quote
+                        </a>
+                        <a href="{{ route('products.gallery', 'laser-s3') }}" class="inline-block px-10 py-4 border-2 border-brand-blue text-brand-blue rounded-xl font-bold hover:bg-brand-blue hover:text-white transition-all">
+                            View Demo
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

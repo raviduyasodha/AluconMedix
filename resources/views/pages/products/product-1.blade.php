@@ -130,9 +130,14 @@
                             <p class="text-brand-slate text-sm">Dual-pillar electric hoist system for rock-solid stability at any height.</p>
                         </div>
                     </div>
-                    <a href="{{ route('contact') }}" class="inline-block px-10 py-4 bg-brand-blue text-white rounded-xl font-bold hover:bg-brand-blue-mid transition-all shadow-xl">
-                        Request a Quote
-                    </a>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="{{ route('contact') }}" class="inline-block px-10 py-4 bg-brand-blue text-white rounded-xl font-bold hover:bg-brand-blue-mid transition-all shadow-xl">
+                            Request a Quote
+                        </a>
+                        <a href="{{ route('products.gallery', 'vita-x100') }}" class="inline-block px-10 py-4 border-2 border-brand-blue text-brand-blue rounded-xl font-bold hover:bg-brand-blue hover:text-white transition-all">
+                            View Demo
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
