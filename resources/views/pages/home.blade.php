@@ -89,7 +89,7 @@
                         </div>
                     </div>
                     <h3 class="text-2xl font-bold mb-4 group-hover:text-brand-blue-mid transition-colors">Alucon Veterinary Surgical Table</h3>
-                    <p class="text-brand-slate mb-8 leading-relaxed">Designed for the Demands of Modern Surgery. With Versatile V-Top Design & Smooth Electric Lift.</p>
+                    <p class="text-brand-slate mb-8 leading-relaxed">Versatile V-Top design operating table placed on a smooth electric lift designed to meet modern surgical requirements</p>
                     <a href="{{ route('products.detail', 'vita-x100') }}" class="inline-flex items-center justify-center px-6 py-3 bg-brand-blue text-white rounded-lg font-bold hover:bg-brand-blue-mid transition-all">
                         View Technical Specs
                     </a>
@@ -101,8 +101,8 @@
                             <!-- <span class="bg-brand-green text-brand-blue px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">New Release</span>-->
                         </div> 
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 group-hover:text-brand-blue-mid transition-colors">Alucon Infant Warmer</h3>
-                    <p class="text-brand-slate mb-8 leading-relaxed">Advanced surgical laser system designed for ultra-precise procedures with minimal tissue damage and rapid recovery.</p>
+                    <h3 class="text-2xl font-bold mb-4 group-hover:text-brand-blue-mid transition-colors">Alucon Neonatal Infant Radiant Warmer</h3>
+                    <p class="text-brand-slate mb-8 leading-relaxed">nurturing cocoon of precision-controlled heat, ensuring a safe, stable environment for life's first precious moments</p>
                     <a href="{{ route('products.detail', 'laser-s3') }}" class="inline-flex items-center justify-center px-6 py-3 bg-brand-blue text-white rounded-lg font-bold hover:bg-brand-blue-mid transition-all">
                         View Technical Specs
                     </a>

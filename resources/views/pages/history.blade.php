@@ -264,23 +264,6 @@
             transition-delay: 0.1s;
         }
         
-        /* Mobile timeline line */
-        @media (max-width: 768px) {
-            .timeline-item::before {
-                content: '';
-                position: absolute;
-                left: 20px;
-                top: 40px;
-                bottom: -20px;
-                width: 2px;
-                background: linear-gradient(to bottom, #1A3C6E, #2563EB);
-                z-index: 0;
-            }
-            
-            .timeline-item:last-child::before {
-                display: none;
-            }
-        }
         
         /* Progress indicator */
         /* .progress-bar {

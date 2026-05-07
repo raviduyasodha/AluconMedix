@@ -25,8 +25,8 @@
             <div>
                 <h4 class="text-white font-bold mb-6">Featured Products</h4>
                 <ul class="space-y-3 text-sm">
-                    <li><a href="{{ route('products.detail', 'vita-x100') }}" class="hover:text-brand-neon transition-colors">Alucon Infant Warmer</a></li>
-                    <li><a href="{{ route('products.detail', 'laser-s3') }}" class="hover:text-brand-neon transition-colors">Veterinary Surgical Table</a></li>
+                    <li><a href="{{ route('products.detail', 'vita-x100') }}" class="hover:text-brand-neon transition-colors">Veterinary Surgical Table</a></li>
+                    <li><a href="{{ route('products.detail', 'laser-s3') }}" class="hover:text-brand-neon transition-colors" style="font-size:13px;">Alucon Neonatal Infant Radiant Warmer</a></li>
                     <li><a href="{{ route('products') }}" class="hover:text-brand-neon transition-colors">All Products</a></li>
                 </ul>
             </div>

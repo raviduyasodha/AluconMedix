@@ -27,9 +27,9 @@
                         <h3 class="text-3xl font-bold text-brand-blue mb-4">Alucon Veterinary Surgical Table</h3>
                         <p class="text-brand-slate text-lg mb-8 leading-relaxed">High-precision real-time monitoring for critical care environments with intuitive touch interface and cloud connectivity.</p>
                         <div class="flex flex-wrap gap-3 mb-10">
-                            <span class="bg-blue-50 text-brand-blue-mid px-4 py-1.5 rounded-full text-sm font-semibold">Touchscreen</span>
+                            {{-- <span class="bg-blue-50 text-brand-blue-mid px-4 py-1.5 rounded-full text-sm font-semibold">Touchscreen</span>
                             <span class="bg-blue-50 text-brand-blue-mid px-4 py-1.5 rounded-full text-sm font-semibold">12-Lead ECG</span>
-                            <span class="bg-blue-50 text-brand-blue-mid px-4 py-1.5 rounded-full text-sm font-semibold">Cloud Sync</span>
+                            <span class="bg-blue-50 text-brand-blue-mid px-4 py-1.5 rounded-full text-sm font-semibold">Cloud Sync</span> --}}
                         </div>
                         <a href="{{ route('products.detail', 'vita-x100') }}" class="inline-flex items-center justify-center w-full py-4 bg-brand-blue text-white rounded-xl font-bold hover:bg-brand-blue-mid transition-all shadow-md group">
                             View Technical Details <i data-lucide="chevron-right" class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"></i>
@@ -42,16 +42,16 @@
                     <div class="relative aspect-[4/3] overflow-hidden">
                         <img src="{{ asset('images/B.jpg') }}" alt="LASER-S3 Scalpel" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                         <div class="absolute inset-0 bg-gradient-to-t from-brand-blue/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
-                            <p class="text-white text-sm font-medium">Alucon Infant Warmer</p>
+                            <p class="text-white text-sm font-medium">Alucon Neonatal Infant Radiant Warmer</p>
                         </div>
                     </div>
                     <div class="p-10">
-                        <h3 class="text-3xl font-bold text-brand-blue mb-4">Alucon Infant Warmer</h3>
+                        <h3 class="text-3xl font-bold text-brand-blue mb-4">Alucon Neonatal Infant Radiant Warmer</h3>
                         <p class="text-brand-slate text-lg mb-8 leading-relaxed">Advanced surgical laser system designed for ultra-precise procedures with minimal tissue damage and rapid recovery.</p>
                         <div class="flex flex-wrap gap-3 mb-10">
-                            <span class="bg-blue-50 text-brand-blue-mid px-4 py-1.5 rounded-full text-sm font-semibold">AI-Assisted</span>
+                            {{-- <span class="bg-blue-50 text-brand-blue-mid px-4 py-1.5 rounded-full text-sm font-semibold">AI-Assisted</span>
                             <span class="bg-blue-50 text-brand-blue-mid px-4 py-1.5 rounded-full text-sm font-semibold">Ultra-Short Pulse</span>
-                            <span class="bg-blue-50 text-brand-blue-mid px-4 py-1.5 rounded-full text-sm font-semibold">Haptic Feedback</span>
+                            <span class="bg-blue-50 text-brand-blue-mid px-4 py-1.5 rounded-full text-sm font-semibold">Haptic Feedback</span> --}}
                         </div>
                         <a href="{{ route('products.detail', 'laser-s3') }}" class="inline-flex items-center justify-center w-full py-4 bg-brand-blue text-white rounded-xl font-bold hover:bg-brand-blue-mid transition-all shadow-md group">
                             View Technical Details <i data-lucide="chevron-right" class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"></i>
