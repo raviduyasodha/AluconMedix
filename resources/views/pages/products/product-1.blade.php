@@ -16,30 +16,31 @@
                 <!-- Image Gallery (Interactive Slider) -->
                 <div class="relative group">
                     <div class="aspect-square bg-white rounded-[3rem] overflow-hidden shadow-2xl border border-gray-100 relative cursor-zoom-in group/zoom" id="product-gallery">
-                        <img id="main-product-image" src="{{ asset('images/A.jpg') }}" alt="Veterinary Surgical Table" class="w-full h-full object-cover transition-transform duration-200 ease-out origin-center">
+                        <img id="main-product-image" src="{{ asset('images/A.jpg') }}" alt="Veterinary Surgical Table" class="w-full h-full object-cover transition-opacity duration-300 ease-out origin-center">
                         
+                        <!-- Loading Spinner -->
+                        <div id="image-loader" class="absolute inset-0 flex items-center justify-center bg-white/40 opacity-0 transition-opacity duration-300 pointer-events-none">
+                            <div class="w-10 h-10 border-4 border-brand-blue border-t-transparent rounded-full animate-spin shadow-lg"></div>
+                        </div>
+
                         <!-- Navigation Arrows -->
-                        <div class="absolute inset-0 flex items-center justify-between px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                            <button onclick="prevImage()" onmouseenter="isHoveringNav = true" onmouseleave="isHoveringNav = false" class="pointer-events-auto w-12 h-12 bg-white/90 hover:bg-white text-brand-blue rounded-full shadow-lg flex items-center justify-center transition-all transform hover:scale-110">
-                                <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                        <div class="absolute inset-0 flex items-center justify-between px-4 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                            <button onclick="prevImage()" onmouseenter="isHoveringNav = true" onmouseleave="isHoveringNav = false" class="pointer-events-auto w-10 h-10 md:w-12 md:h-12 bg-white/90 hover:bg-white text-brand-blue rounded-full shadow-lg flex items-center justify-center transition-all transform hover:scale-110">
+                                <i data-lucide="chevron-left" class="w-5 h-5 md:w-6 md:h-6"></i>
                             </button>
-                            <button onclick="nextImage()" onmouseenter="isHoveringNav = true" onmouseleave="isHoveringNav = false" class="pointer-events-auto w-12 h-12 bg-white/90 hover:bg-white text-brand-blue rounded-full shadow-lg flex items-center justify-center transition-all transform hover:scale-110">
-                                <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                            <button onclick="nextImage()" onmouseenter="isHoveringNav = true" onmouseleave="isHoveringNav = false" class="pointer-events-auto w-10 h-10 md:w-12 md:h-12 bg-white/90 hover:bg-white text-brand-blue rounded-full shadow-lg flex items-center justify-center transition-all transform hover:scale-110">
+                                <i data-lucide="chevron-right" class="w-5 h-5 md:w-6 md:h-6"></i>
                             </button>
                         </div>
 
                         <!-- Image Indicators -->
-                        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2">
+                        <div class="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 flex gap-2">
                             <div class="indicator w-2 h-2 rounded-full bg-brand-blue transition-all duration-300" data-index="0"></div>
                             <div class="indicator w-2 h-2 rounded-full bg-gray-300 transition-all duration-300" data-index="1"></div>
                             <div class="indicator w-2 h-2 rounded-full bg-gray-300 transition-all duration-300" data-index="2"></div>
                             <div class="indicator w-2 h-2 rounded-full bg-gray-300 transition-all duration-300" data-index="3"></div>
                         </div>
                     </div>
-                    
-                    {{-- <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-brand-neon rounded-full flex items-center justify-center border-8 border-gray-50 shadow-lg z-10">
-                        <span class="text-brand-blue font-bold text-center leading-tight">ISO<br>Certified</span>
-                    </div> --}}
                 </div>
 
                 <script>
@@ -50,19 +51,29 @@
                         "{{ asset('images/E.jpg') }}", 
                         "{{ asset('images/F.jpg') }}",
                         "{{ asset('images/G.jpg') }}"
-                        
                     ];
                     let currentIndex = 0;
                     const mainImage = document.getElementById('main-product-image');
+                    const loader = document.getElementById('image-loader');
                     const indicators = document.querySelectorAll('.indicator');
+                    const gallery = document.getElementById('product-gallery');
+                    let isHoveringNav = false;
+                    let isZoomed = false;
+                    let lastTap = 0;
 
                     function updateImage(index) {
                         currentIndex = index;
-                        mainImage.style.opacity = '0';
-                        setTimeout(() => {
+                        loader.classList.remove('opacity-0');
+                        mainImage.style.opacity = '0.5';
+
+                        const tempImg = new Image();
+                        tempImg.src = images[currentIndex];
+                        tempImg.onload = () => {
                             mainImage.src = images[currentIndex];
                             mainImage.style.opacity = '1';
-                        }, 250);
+                            loader.classList.add('opacity-0');
+                            resetZoom();
+                        };
 
                         indicators.forEach((ind, i) => {
                             if (i === currentIndex) {
@@ -75,25 +86,67 @@
                         });
                     }
 
-                    function nextImage() {
-                        let next = (currentIndex + 1) % images.length;
-                        updateImage(next);
-                    }
+                    function nextImage() { updateImage((currentIndex + 1) % images.length); }
+                    function prevImage() { updateImage((currentIndex - 1 + images.length) % images.length); }
 
-                    function prevImage() {
-                        let prev = (currentIndex - 1 + images.length) % images.length;
-                        updateImage(prev);
-                    }
-
-                    // Zoom Effect Logic
-                    const gallery = document.getElementById('product-gallery');
-                    let isHoveringNav = false;
+                    // Touch & Double Tap Zoom Support
+                    let touchStartX = 0;
                     
-                    gallery.addEventListener('mousemove', (e) => {
-                        if (isHoveringNav) {
-                            mainImage.style.transform = 'scale(1)';
-                            return;
+                    gallery.addEventListener('touchstart', e => {
+                        touchStartX = e.changedTouches[0].screenX;
+                    }, { passive: true });
+
+                    gallery.addEventListener('touchend', e => {
+                        const touchEndX = e.changedTouches[0].screenX;
+                        const now = new Date().getTime();
+                        
+                        // Handle Double Tap
+                        if (now - lastTap < 300) {
+                            handleDoubleTap(e.changedTouches[0]);
+                        } else {
+                            // Handle Swipe only if not zoomed
+                            if (!isZoomed) {
+                                if (touchEndX < touchStartX - 50) nextImage();
+                                if (touchEndX > touchStartX + 50) prevImage();
+                            }
                         }
+                        lastTap = now;
+                    }, { passive: true });
+
+                    function handleDoubleTap(touch) {
+                        isZoomed = !isZoomed;
+                        if (isZoomed) {
+                            mainImage.style.transform = 'scale(2.5)';
+                            updateZoomPos(touch);
+                        } else {
+                            resetZoom();
+                        }
+                    }
+
+                    function resetZoom() {
+                        isZoomed = false;
+                        mainImage.style.transform = 'scale(1)';
+                        mainImage.style.transformOrigin = 'center center';
+                    }
+
+                    function updateZoomPos(touch) {
+                        const rect = gallery.getBoundingClientRect();
+                        const x = ((touch.clientX - rect.left) / rect.width) * 100;
+                        const y = ((touch.clientY - rect.top) / rect.height) * 100;
+                        mainImage.style.transformOrigin = `${x}% ${y}%`;
+                    }
+
+                    gallery.addEventListener('touchmove', e => {
+                        if (isZoomed) {
+                            e.preventDefault(); // Prevent page scroll when dragging zoomed image
+                            updateZoomPos(e.touches[0]);
+                        }
+                    }, { passive: false });
+
+                    // Desktop Mouse Move Zoom
+                    gallery.addEventListener('mousemove', (e) => {
+                        if (window.innerWidth < 1024 || isHoveringNav || isZoomed) return;
+                        
                         const rect = gallery.getBoundingClientRect();
                         const x = ((e.clientX - rect.left) / rect.width) * 100;
                         const y = ((e.clientY - rect.top) / rect.height) * 100;
@@ -103,11 +156,9 @@
                     });
 
                     gallery.addEventListener('mouseleave', () => {
-                        mainImage.style.transform = 'scale(1)';
-                        mainImage.style.transformOrigin = 'center center';
+                        if (!isZoomed) resetZoom();
                     });
 
-                    // Initial state for indicators
                     updateImage(0);
                 </script>
 

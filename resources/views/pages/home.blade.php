@@ -6,7 +6,7 @@
     <!-- Hero Section -->
     <header class="relative h-[85vh] flex items-center bg-brand-blue text-white overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <div class="max-w-6xl">
+            <div class="max-w-5.5xl">
                 <h1 class="text-6xl max-w-5xl md:text-7xl font-extrabold leading-[1.1] mb-8 animate-fade-in-up">
                     Leading the Future of <span class="text-brand-neon">Medical Technology</span>
                 </h1>

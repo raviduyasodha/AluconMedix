@@ -47,7 +47,7 @@
                     </div>
                     <div class="p-10">
                         <h3 class="text-3xl font-bold text-brand-blue mb-4">Alucon Neonatal Infant Radiant Warmer</h3>
-                        <p class="text-brand-slate text-lg mb-8 leading-relaxed">Our radiant warmer provides a nurturing cocoon of precision-controlled heat, ensuring a safe, stable environment for life's first precious moments. Advanced technology, delivered with a soft touch.</p>
+                        <p class="text-brand-slate text-lg mb-8 leading-relaxed">nurturing cocoon of precision-controlled heat, ensuring a safe, stable environment for life's first precious moments</p>
                         <div class="flex flex-wrap gap-3 mb-10">
                             {{-- <span class="bg-blue-50 text-brand-blue-mid px-4 py-1.5 rounded-full text-sm font-semibold">AI-Assisted</span>
                             <span class="bg-blue-50 text-brand-blue-mid px-4 py-1.5 rounded-full text-sm font-semibold">Ultra-Short Pulse</span>
@@ -69,7 +69,7 @@
                 <div class="flex-1">
                     <h2 class="text-4xl font-bold text-brand-blue mb-6">Need a Custom Solution?</h2>
                     <p class="text-brand-slate text-lg leading-relaxed mb-8">Our engineering team specializes in adapting our core technologies for specialized clinical needs. From custom sensor arrays to integrated hospital ecosystems, we can build it.</p>
-                    <a href="{{ route('contact') }}" class="inline-flex items-center px-8 py-4 bg-brand-blue-mid text-white rounded-xl font-bold hover:bg-brand-blue transition-all">
+                    <a href="{{ route('contact') }}" class="inline-flex items-center justify-center px-20 py-4 bg-brand-blue-mid text-white rounded-xl font-bold hover:bg-brand-blue transition-all">
                         Inquire About Customization
                     </a>
                 </div>
