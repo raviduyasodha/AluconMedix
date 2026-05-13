@@ -1,7 +1,7 @@
 <nav class="sticky top-0 w-full bg-white backdrop-blur-md z-[1000] border-b border-gray-200 py-4">
     <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <a href="{{ route('home') }}" class="text-2xl font-extrabold text-brand-blue flex items-center gap-2">
-            <img src="{{ asset('images/LOGO.jpg') }}" alt="Alucon Medix Logo" width="250px" >
+            <img src="{{ asset('images/LOGO.jpg') }}" alt="Alucon Medix Logo" class="w-32 sm:w-40 md:w-48 lg:w-56 xl:w-64 h-auto" >
         </a>
         <ul class="hidden lg:flex gap-8 items-center font-medium">
             <li><a href="{{ route('home') }}" class="{{ request()->routeIs('home') ? 'text-brand-blue-mid border-b-2 border-brand-neon pb-1' : 'hover:text-brand-blue-mid transition-colors' }}">Home</a></li>
@@ -18,7 +18,7 @@
     </div>
 
     <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-[70%] right-0 shadow-2xl z-[999]">
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute right-0 top-full shadow-2xl z-[999] w-[85%] sm:w-[75%] md:w-[70%]">
         <div class="flex flex-col p-8 space-y-6">
             <a href="{{ route('home') }}" class="text-xl font-bold text-brand-blue {{ request()->routeIs('home') ? 'text-brand-blue-mid' : '' }}">Home</a>
             <a href="{{ route('about') }}" class="text-xl font-bold text-brand-blue {{ request()->routeIs('about') ? 'text-brand-blue-mid' : '' }}">About</a>

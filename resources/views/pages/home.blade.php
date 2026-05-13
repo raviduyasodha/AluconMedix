@@ -4,20 +4,20 @@
 
 @section('content')
     <!-- Hero Section -->
-    <header class="relative h-[85vh] flex items-center bg-brand-blue text-white overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <header class="relative min-h-[50vh] sm:min-h-[55vh] md:min-h-[60vh] lg:min-h-[65vh] xl:h-[85vh] flex items-center bg-brand-blue text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
             <div class="max-w-6xl">
-                <h1 class="text-6xl max-w-5xl md:text-7xl font-extrabold leading-[1.1] mb-8 animate-fade-in-up">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl max-w-4xl lg:max-w-5xl font-extrabold leading-[1.1] mb-6 sm:mb-8 animate-fade-in-up">
                     Leading the Future of <span class="text-brand-neon">Medical Technology</span>
                 </h1>
-                <p class="text-xl max-w-3xl md:text-2xl opacity-90 mb-10 leading-relaxed">
+                <p class="text-base sm:text-lg md:text-xl lg:text-2xl max-w-2xl lg:max-w-3xl opacity-90 mb-8 sm:mb-10 leading-relaxed">
                     AluconMedix designs and manufactures premium-grade medical equipment for hospitals and clinics worldwide. Precision. Quality. Innovation.
                 </p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="{{ route('products') }}" class="px-8 py-4 bg-brand-blue-mid text-white rounded-lg font-bold text-lg hover:bg-blue-700 hover:-translate-y-1 transition-all shadow-xl">
+                <div class="flex flex-wrap gap-3 sm:gap-4">
+                    <a href="{{ route('products') }}" class="px-6 py-3 sm:px-8 sm:py-4 bg-brand-blue-mid text-white rounded-lg font-bold text-base sm:text-lg hover:bg-blue-700 hover:-translate-y-1 transition-all shadow-xl">
                         Explore Products
                     </a>
-                    <a href="{{ route('contact') }}" class="px-8 py-4 border-2 border-brand-neon text-white rounded-lg font-bold text-lg hover:bg-brand-neon hover:text-brand-blue hover:-translate-y-1 transition-all">
+                    <a href="{{ route('contact') }}" class="px-6 py-3 sm:px-8 sm:py-4 border-2 border-brand-neon text-white rounded-lg font-bold text-base sm:text-lg hover:bg-brand-neon hover:text-brand-blue hover:-translate-y-1 transition-all">
                         Contact Us
                     </a>
                 </div>
@@ -69,41 +69,41 @@
     </section>-->
 
     <!-- Product Highlights -->
-    <section class="py-24">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+    <section class="py-16 sm:py-20 lg:py-24">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 sm:mb-16 gap-6">
                 <div class="max-w-2xl">
-                    <h2 class="text-4xl font-bold text-brand-blue mb-4">Innovative Solutions</h2>
-                    <p class="text-brand-slate text-lg">Discover our range of advanced medical devices designed for precision and ease of use.</p>
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-blue mb-4">Innovative Solutions</h2>
+                    <p class="text-brand-slate text-base sm:text-lg">Discover our range of advanced medical devices designed for precision and ease of use.</p>
                 </div>
                 <a href="{{ route('products') }}" class="text-brand-blue-mid font-bold flex items-center gap-2 group">
                     View All Products <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
                 </a>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12">
                 <div class="group">
-                    <div class="relative aspect-video rounded-3xl overflow-hidden mb-8 shadow-lg">
+                    <div class="relative aspect-video rounded-2xl sm:rounded-3xl overflow-hidden mb-6 sm:mb-8 shadow-lg">
                         <img src="{{ asset('images/A.jpg') }}" alt="VITA-X100 Monitor" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">
-                            <span class="bg-brand-neon text-brand-blue px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">New Release</span>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4 sm:p-8">
+                            <span class="bg-brand-neon text-brand-blue px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">New Release</span>
                         </div>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 group-hover:text-brand-blue-mid transition-colors">Alucon Veterinary Surgical Table</h3>
-                    <p class="text-brand-slate mb-8 leading-relaxed">Versatile V-Top design operating table placed on a smooth electric lift designed to meet modern surgical requirements</p>
-                    <a href="{{ route('products.detail', 'vita-x100') }}" class="inline-flex items-center justify-center px-6 py-3 bg-brand-blue text-white rounded-lg font-bold hover:bg-brand-blue-mid transition-all">
+                    <h3 class="text-xl sm:text-2xl font-bold mb-4 group-hover:text-brand-blue-mid transition-colors">Alucon Veterinary Surgical Table</h3>
+                    <p class="text-brand-slate mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base">Versatile V-Top design operating table placed on a smooth electric lift designed to meet modern surgical requirements</p>
+                    <a href="{{ route('products.detail', 'vita-x100') }}" class="inline-flex items-center justify-center px-5 py-2.5 sm:px-6 sm:py-3 bg-brand-blue text-white rounded-lg font-bold hover:bg-brand-blue-mid transition-all text-sm sm:text-base">
                         View Technical Specs
                     </a>
                 </div>
                 <div class="group">
-                    <div class="relative aspect-video rounded-3xl overflow-hidden mb-8 shadow-lg">
+                    <div class="relative aspect-video rounded-2xl sm:rounded-3xl overflow-hidden mb-6 sm:mb-8 shadow-lg">
                         <img src="{{ asset('images/B.jpg') }}" alt="LASER-S3 Scalpel" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                       <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">
+                       <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4 sm:p-8">
                             <!-- <span class="bg-brand-green text-brand-blue px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">New Release</span>-->
                         </div> 
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 group-hover:text-brand-blue-mid transition-colors">Alucon Neonatal Infant Radiant Warmer</h3>
-                    <p class="text-brand-slate mb-8 leading-relaxed">nurturing cocoon of precision-controlled heat, ensuring a safe, stable environment for life's first precious moments</p>
-                    <a href="{{ route('products.detail', 'laser-s3') }}" class="inline-flex items-center justify-center px-6 py-3 bg-brand-blue text-white rounded-lg font-bold hover:bg-brand-blue-mid transition-all">
+                    <h3 class="text-xl sm:text-2xl font-bold mb-4 group-hover:text-brand-blue-mid transition-colors">Alucon Neonatal Infant Radiant Warmer</h3>
+                    <p class="text-brand-slate mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base">Nurturing cocoon of precision-controlled heat, ensuring a safe, stable environment for life's first precious moments</p>
+                    <a href="{{ route('products.detail', 'laser-s3') }}" class="inline-flex items-center justify-center px-5 py-2.5 sm:px-6 sm:py-3 bg-brand-blue text-white rounded-lg font-bold hover:bg-brand-blue-mid transition-all text-sm sm:text-base">
                         View Technical Specs
                     </a>
                 </div>
@@ -112,59 +112,59 @@
     </section>
     
     <!-- Rent From Us -->
-    <section class="py-24 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-6">
+    {{-- <section class="py-16 sm:py-20 lg:py-24 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
              <div class="max-w-2xl">
-                    <h2 class="text-4xl font-bold text-brand-blue mb-4">Rent From Us</h2>
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-blue mb-4">Rent From Us</h2>
                 </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 items-center">
                 <div class="relative group">
-                    <div class="aspect-square bg-white rounded-[3rem] overflow-hidden shadow-2xl border border-gray-100">
+                    <div class="aspect-square bg-white rounded-2xl sm:rounded-[3rem] overflow-hidden shadow-2xl border border-gray-100">
                         <img src="{{ asset('images/A.jpg') }}" alt="Rental Surgical Table" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                     </div>
-                    <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-brand-neon rounded-full flex items-center justify-center border-8 border-gray-50 shadow-lg z-10">
-                        <span class="text-brand-blue font-bold text-center leading-tight uppercase text-sm">Rent<br>Ready</span>
+                    <div class="absolute -bottom-4 sm:-bottom-6 -right-4 sm:-right-6 w-24 h-24 sm:w-32 sm:h-32 bg-brand-neon rounded-full flex items-center justify-center border-4 sm:border-8 border-gray-50 shadow-lg z-10">
+                        <span class="text-brand-blue font-bold text-center leading-tight uppercase text-xs sm:text-sm">Rent<br>Ready</span>
                     </div>
                 </div>
 
                 <div>
                     
-                    <p class="text-xl text-brand-slate mb-8 leading-relaxed">
+                    <p class="text-base sm:text-xl text-brand-slate mb-6 sm:mb-8 leading-relaxed">
                         Need medical equipment for short-term projects or temporary replacements? 
                         Our rental program offers top-tier equipment with flexible terms and full maintenance support.
                     </p>
                     
-                    <div class="space-y-4 mb-10">
+                    <div class="space-y-3 sm:space-y-4 mb-8 sm:mb-10">
                         <div class="flex items-center gap-3 text-brand-slate">
-                            <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-blue-mid"></i>
-                            <span>Zero maintenance worries</span>
+                            <i data-lucide="check-circle-2" class="w-5 h-5 sm:w-6 sm:h-6 text-brand-blue-mid flex-shrink-0"></i>
+                            <span class="text-sm sm:text-base">Zero maintenance worries</span>
                         </div>
                         <div class="flex items-center gap-3 text-brand-slate">
-                            <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-blue-mid"></i>
-                            <span>Flexible weekly/monthly contracts</span>
+                            <i data-lucide="check-circle-2" class="w-5 h-5 sm:w-6 sm:h-6 text-brand-blue-mid flex-shrink-0"></i>
+                            <span class="text-sm sm:text-base">Flexible weekly/monthly contracts</span>
                         </div>
                         <div class="flex items-center gap-3 text-brand-slate">
-                            <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-blue-mid"></i>
-                            <span>Immediate delivery and setup</span>
+                            <i data-lucide="check-circle-2" class="w-5 h-5 sm:w-6 sm:h-6 text-brand-blue-mid flex-shrink-0"></i>
+                            <span class="text-sm sm:text-base">Immediate delivery and setup</span>
                         </div>
                     </div>
 
-                    <a href="{{ route('products.detail', 'rent-surgical-table') }}" class="inline-block px-10 py-4 bg-brand-blue text-white rounded-xl font-bold hover:bg-brand-blue-mid transition-all shadow-xl">
+                    <a href="{{ route('products.detail', 'rent-surgical-table') }}" class="inline-block px-8 py-3.5 sm:px-10 sm:py-4 bg-brand-blue text-white rounded-xl font-bold hover:bg-brand-blue-mid transition-all shadow-xl text-sm sm:text-base">
                         View Rental Details
                     </a>
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- CTA Banner -->
-    <section class="py-12">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="relative bg-gradient-to-r from-brand-blue to-brand-blue-mid rounded-[2.5rem] p-12 md:p-20 text-center text-white overflow-hidden">
+    <section class="py-8 sm:py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="relative bg-gradient-to-r from-brand-blue to-brand-blue-mid rounded-2xl sm:rounded-[2.5rem] p-8 sm:p-12 md:p-20 text-center text-white overflow-hidden">
                 <div class="relative z-10 max-w-3xl mx-auto">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-8 leading-tight">Elevate Your Clinical Standards Today</h2>
-                    <p class="text-xl opacity-90 mb-12">Our specialists are ready to help you choose the right equipment for your facility. Contact us for a consultation.</p>
-                    <a href="{{ route('contact') }}" class="inline-block w-full sm:w-auto px-6 py-4 md:px-10 md:py-5 bg-white text-brand-blue rounded-xl font-extrabold text-base md:text-lg hover:bg-brand-neon hover:-translate-y-1 transition-all shadow-2xl">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8 leading-tight">Elevate Your Clinical Standards Today</h2>
+                    <p class="text-base sm:text-lg md:text-xl opacity-90 mb-8 sm:mb-12">Our specialists are ready to help you choose the right equipment for your facility. Contact us for a consultation.</p>
+                    <a href="{{ route('contact') }}" class="inline-block w-full sm:w-auto px-5 py-3.5 sm:px-6 sm:py-4 md:px-10 md:py-5 bg-white text-brand-blue rounded-xl font-extrabold text-sm sm:text-base md:text-lg hover:bg-brand-neon hover:-translate-y-1 transition-all shadow-2xl">
                         Schedule a Technical Consultation
                     </a>
                 </div>
